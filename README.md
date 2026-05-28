@@ -7,4 +7,4 @@
   JavaScript
 
 # Live Demo
-      https://indhrakumar.github.io/contact/
+  https://indhrakumar.github.io/contact/
