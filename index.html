@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Pro contact Book</h2>
+      <div class="inputfield">
+        <input id="name" type="text" placeholder="Full Name" class="inputs" />
+        <input
+          id="phone"
+          type="number"
+          placeholder="Phone Number"
+          class="inputs" />
+        <select id="grp" class="inputs">
+          <option value="" disabled selected hidden>Select Group</option>
+          <option value="Friend">Friend</option>
+          <option value="Family">Family</option>
+          <option value="Work">Work</option>
+        </select>
+        <button type="button" onclick="save()" class="btn">Save</button>
+      </div>
+      <div class="searchfield">
+        <input
+          type="search"
+          placeholder="Search"
+          class="search"
+          id="search"
+          onkeyup="searchData()" />
+      </div>
+      <div class="groups">
+        <button onclick="setFilter('All')" class="btn active">All</button>
+        <button onclick="setFilter('Friend')" class="btn">Friends</button>
+        <button onclick="setFilter('Family')" class="btn">Family</button>
+        <button onclick="setFilter('Work')" class="btn">Work</button>
+      </div>
+      <div class="display-box">
+        <div class="btn-div">
+          <button type="button" onclick="clr()" class="clrbtn">
+            Clear All
+          </button>
+        </div>
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Group</th>
+            <th>Action</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
